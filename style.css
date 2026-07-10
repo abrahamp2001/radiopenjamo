@@ -1,0 +1,526 @@
+body{
+
+font-family:Poppins,sans-serif;
+
+background:#f4f6f9;
+
+}
+
+.hero{
+    background-image: url("img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding:180px 20px 120px;
+}
+.hero{
+    background-image: url("img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+    padding: 120px 20px;
+
+    position: relative;
+    overflow: hidden;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+}
+
+.hero .container{
+    position: relative;
+    z-index: 1;
+}
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:45px;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.28);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
+}
+.hero h3{
+
+font-size:35px;
+
+margin-bottom:20px;
+
+}
+
+.card{
+
+border:none;
+
+border-radius:20px;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+footer{
+
+font-size:18px;
+
+}
+.live-badge{
+
+display:inline-block;
+
+background:#ff0000;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+margin-bottom:20px;
+
+font-size:18px;
+
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+box-shadow:0 0 0 0 rgba(255,0,0,.7);
+
+}
+
+70%{
+
+box-shadow:0 0 0 18px rgba(255,0,0,0);
+
+}
+
+100%{
+
+box-shadow:0 0 0 0 rgba(255,0,0,0);
+
+}
+
+}
+/*=========================
+   BARRA DE NAVEGACIÓN
+==========================*/
+
+.navbar{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(20,20,20,.20) !important;
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(255,255,255,.20);
+
+}
+
+.navbar-brand{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+.nav-link{
+
+    color:white !important;
+
+    font-size:18px;
+
+    margin-left:12px;
+
+    transition:.30s;
+
+}
+
+.nav-link:hover{
+
+    color:#FFD700 !important;
+
+}
+/* ===== BOTONES MULTIMEDIA ===== */
+
+.action-buttons{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:18px;
+
+margin-top:35px;
+
+}
+
+.action-btn{
+
+border:none;
+
+border-radius:18px;
+
+padding:15px 28px;
+
+font-size:18px;
+
+font-weight:bold;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+cursor:pointer;
+
+transition:.35s;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.action-btn:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+}
+
+.radio-btn{
+
+background:#d90429;
+
+}
+
+.tv-btn{
+
+background:#2196F3;
+
+}
+
+.fb-btn{
+
+background:#1877F2;
+
+}
+
+.wa-btn{
+
+background:#25D366;
+
+}
+/*========================================
+      TV EN VIVO
+========================================*/
+
+.tv-brand{
+
+position:absolute;
+
+top:52px;
+
+right:20px;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+padding:10px 15px;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(10px);
+
+border-radius:15px;
+
+border:1px solid rgba(255,255,255,.25);
+
+z-index:9999;
+
+}
+
+.tv-logo{
+
+width:70px;
+
+height:auto;
+
+filter:drop-shadow(0 0 8px rgba(0,0,0,.7));
+
+}
+
+.tv-brand-text{
+
+color:white;
+
+font-family:Poppins,sans-serif;
+
+line-height:1.2;
+
+}
+
+.tv-brand-text strong{
+
+font-size:15px;
+
+}
+
+.tv-brand-text small{
+
+font-size:12px;
+
+opacity:.85;
+
+}
+
+.tv-live{
+
+position:absolute;
+
+top:20px;
+
+left:20px;
+
+background:#ff0000;
+
+color:white;
+
+padding:8px 18px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+font-size:14px;
+
+z-index:9999;
+
+box-shadow:0 0 12px red;
+
+animation:parpadeo 1s infinite;
+
+}
+
+@keyframes parpadeo{
+
+0%{opacity:1;}
+
+50%{opacity:.4;}
+
+100%{opacity:1;}
+
+}
+/*=========================================
+        CINTILLO DE TV
+=========================================*/
+
+.tv-ticker{
+
+width:100%;
+
+background:rgba(0,0,0,.85);
+
+overflow:hidden;
+
+white-space:nowrap;
+
+border-top:2px solid #d40000;
+
+padding:10px 0;
+
+}
+
+.tv-ticker-text{
+
+display:inline-block;
+
+color:#ffffff;
+
+font-weight:bold;
+
+font-size:18px;
+
+padding-left:100%;
+
+animation:ticker 25s linear infinite;
+
+}
+
+@keyframes ticker{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
+
+}
+/*=========================
+TARJETAS DE PROGRAMAS
+=========================*/
+
+.program-card{
+
+cursor:pointer;
+
+transition:.30s;
+
+}
+
+.program-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+/*=========================================
+        BARRA SUPERIOR
+=========================================*/
+
+.topTicker{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+    /* ===== EFECTO CRISTAL ===== */
+
+    background: rgba(255,255,255,0.45);
+
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+    border-bottom: 1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+}
+
+.topTicker-content{
+
+    display:inline-block;
+
+    white-space:nowrap;
+
+    animation:tickerMove 35s linear infinite;
+
+}
+
+.topTicker:hover .topTicker-content{
+
+    animation-play-state:paused;
+
+}
+
+.ticker-item{
+
+    display:inline-block;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    margin-right:40px;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.50);
+
+}
+
+@keyframes tickerMove{
+
+    0%{
+
+        transform:translateX(100vw);
+
+    }
+
+    100%{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+body{
+
+    padding-top:55px;
+
+}
